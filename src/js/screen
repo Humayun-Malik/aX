@@ -1,0 +1,57 @@
+import activeWin from 'active-win';
+
+let appUsage = {}; // To store app usage time
+let currentApp = '';
+let appStartTime = Date.now();
+
+// Function to fetch active window and calculate screen time for tracked apps
+async function trackAppScreenTime() {
+  const window = await activeWin();
+
+  // List of tracked applications
+  const trackedApps = ['Google Chrome', 'Visual Studio Code'];
+
+  if (window && window.owner && trackedApps.includes(window.owner.name)) {
+    if (window.owner.name !== currentApp) {
+      // If the app has changed, update the screen time for the previous app
+      const currentTime = Date.now();
+      const elapsedTime = (currentTime - appStartTime) / 1000; // Time in seconds
+
+      // Add to previous app's screen time
+      if (appUsage[currentApp]) {
+        appUsage[currentApp] += elapsedTime;
+      } else {
+        appUsage[currentApp] = elapsedTime;
+      }
+
+      // Reset tracking for the new app
+      currentApp = window.owner.name;
+      appStartTime = currentTime;
+    }
+  } else if (currentApp !== '') {
+    // If the current window is not a tracked app, reset tracking for the current app
+    const currentTime = Date.now();
+    const elapsedTime = (currentTime - appStartTime) / 1000;
+
+    if (appUsage[currentApp]) {
+      appUsage[currentApp] += elapsedTime;
+    } else {
+      appUsage[currentApp] = elapsedTime;
+    }
+
+    currentApp = '';
+    appStartTime = currentTime;
+  }
+
+  // Return the app usage data for display
+  return appUsage;
+}
+
+// Start the tracker
+export function startAppScreenTimeTracking() {
+  setInterval(async () => {
+    const usageData = await trackAppScreenTime();
+    // Send usageData to the renderer for display
+    window.electronAPI.sendAppUsage(usageData);
+  }, 10000); // Update every 10 seconds
+}

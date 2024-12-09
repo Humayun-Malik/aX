@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="title">ArenaX</div>
+    <div class="container">
+        <!-- Left Section for Logo -->
+        <!-- <div class="left-section">
+            <img src="desktop.jpg" alt="App Logo" class="logo">
+        </div>
+         -->
+        <!-- Right Section for Login Form -->
+        <div class="right-section">
+            <h2>Game On!</h2>
+            <p>Please login to your account.</p>
+            <form id="loginForm">
+                <div class="input-box">
+                <!-- <label for="username">Username</label> -->
+                <input type="text" placeholder="Username" id="username" name="username" required>
+                <i class='bx bxs-user'></i>
+                </div>
+                <!-- <label for="password">Password</label> -->
+                 <div class="input-box">
+                <input type="password" placeholder="Password" id="password" name="password" required>
+                <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="remember-forget">
+                <label for="remember-me"><input type="checkbox">Remember Me</label>
+                <a href="forget.html" id="forgotPasswordLink">Forgot Password?</a>
+                </div>
+
+                <button type="submit" id="loginButton">Login</button>
+                <div class="register-link">
+                  <p>Don't have an account?  <a href="signup.html" id="signUpLink">Register</a></p>
+                </div>
+            </form>
+            
+            <div class="links">
+               
+                <a href="profile.html" id="signInLink">Sign In</a>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/renderer.js"></script> <!-- Make sure you add any necessary scripts here -->
+</body>
+</html>

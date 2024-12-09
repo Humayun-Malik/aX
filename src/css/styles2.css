@@ -1,0 +1,131 @@
+/* styles2.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+
+  background: url('i1.jpg') no-repeat center center fixed; /* Replace 'your-image-path.jpg' with the actual path to your image */
+    background-size:cover; /* Ensures the image covers the entire screen */    color: #fff; /* ArenaX Text Color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Title Styling */
+.title {
+    font-size: 3rem;
+    color: #ed730e; /* ArenaX Primary Color */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+h2{
+    color: #ed730e;
+}
+/* Form Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent; /* Secondary Color */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Signup Form Layout */
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Left and Right Sections */
+.left-section, .right-section {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .left-section, .right-section {
+        width: 48%;
+    }
+}
+
+/* Form Elements Styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ed730e; /* ArenaX Field Outline */
+    border-radius: 5px;
+    background-color: #fff; /* White Background for Fields */
+    color: #000; /* Text Color */
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #808080; /* Hint Text Color */
+}
+
+button {
+    width: 510%;
+    background-color: #ed730e; /* ArenaX Primary Color */
+    color: #fff; /* White Text */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ab4e07; /* Darker ArenaX Text Color */
+}
+
+/* Links Styling */
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+a {
+    color: #f99e59; /* ArenaX Text Color */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Hover Effect */
+    color: #ed730e; /* ArenaX Primary Color */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

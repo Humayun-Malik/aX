@@ -1,0 +1,52 @@
+[
+  {
+    "gameName": "Microsoft Edge",
+    "gamePid": 19620,
+    "startTime": "2024-11-30T07:53:06.293Z",
+    "endTime": "2024-11-30T07:53:07.676Z",
+    "duration": "00:00:01"
+  },
+  {
+    "gameName": "Microsoft Edge",
+    "startTime": "2024-11-30T07:55:43.098Z",
+    "endTime": "2024-11-30T07:55:44.516Z",
+    "duration": "00:00:01"
+  },
+  {
+    "gameName": "Code",
+    "startTime": "2024-11-30T08:31:07.641Z",
+    "endTime": "2024-11-30T08:31:08.962Z",
+    "duration": "00:00:01"
+  },
+  {
+    "gameName": "Code",
+    "startTime": "2024-11-30T09:01:53.631Z",
+    "endTime": "2024-11-30T09:01:54.994Z",
+    "duration": "00:00:01"
+  },
+  {
+    "gameName": "Code",
+    "startTime": "2024-11-30T09:03:59.688Z",
+    "endTime": "2024-11-30T09:04:01.047Z",
+    "duration": "00:00:01"
+  },
+  {
+    "gameName": "Code",
+    "startTime": "2024-11-30T09:04:43.109Z",
+    "endTime": "2024-11-30T09:04:44.423Z",
+    "duration": "00:00:01"
+  },
+  {
+    "gameName": "Code",
+    "startTime": "2024-11-30T09:22:55.169Z",
+    "endTime": "2024-11-30T09:22:56.781Z",
+    "duration": "00:00:01"
+  },
+  {
+    "gameName": "Code",
+    "gamePid": 6700,
+    "startTime": "2024-11-30T10:00:05.471Z",
+    "endTime": "2024-11-30T10:00:06.990Z",
+    "duration": "00:00:01"
+  }
+]

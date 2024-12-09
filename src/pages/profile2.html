@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+  <div id="profile-container">
+    <section id="profile-info">
+      <img id="profile-pic" src="../assets/user-placeholder.png" alt="Profile Picture">
+      <div id="profile-details">
+        <h1 id="user-name">John Doe</h1>
+        <p id="user-bio">Gaming enthusiast, streamer, and content creator.</p>
+        <p id="user-location">📍 New York, USA</p>
+        <div id="analytics">
+          <span><b>Posts:</b> <span id="post-count">0</span></span>
+          <span><b>Followers:</b> <span id="follower-count">0</span></span>
+          <span><b>Following:</b> <span id="following-count">0</span></span>
+        </div>
+        <button id="follow-btn">Follow</button>
+      </div>
+    </section>
+    <section id="posts-section">
+      <h2>User Posts</h2>
+      <div id="posts-container"></div>
+    </section>
+  </div>
+  <script src="../js/profile.js"></script>
+</body>
+</html>

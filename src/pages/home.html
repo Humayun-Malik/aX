@@ -1,0 +1,20 @@
+<div id="app-usage">
+    <h2>App Usage</h2>
+    <ul id="usage-list"></ul>
+  </div>
+  
+  <script>
+    const { ipcRenderer } = require('electron');
+  
+    ipcRenderer.on('app-usage-update', (event, usageStats) => {
+      const usageList = document.getElementById('usage-list');
+      usageList.innerHTML = '';
+  
+      Object.entries(usageStats).forEach(([appName, stats]) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${appName}: ${stats.totalTime} ${stats.isRunning ? '(Running)' : ''}`;
+        usageList.appendChild(listItem);
+      });
+    });
+  </script>
+  

@@ -1,0 +1,138 @@
+/* Global Styling */
+body {
+     background: url('i1.jpg') no-repeat center center fixed; /* Replace 'your-image-path.jpg' with the actual path to your image */
+    background-size:cover; /* Ensures the image covers the entire screen */
+    /* background: linear-gradient(90deg, #1D2843, #0C1521, #000000); */
+    color: #fe913e; /* Text Color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    /* text-shadow: 2px 2px 4px #fe913e; */
+    font-style: italic;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+/* Container for Forgot Password */
+.container {
+    display: flex;
+    width: 800px; /* Standard width */
+    background: transparent; /* Secondary Color */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Left Section */
+.left-section {
+    background: transparent; /* Secondary Color */
+    backdrop-filter: blur(20px);    width: 50%; /* Take half of the container */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section h2, .left-section p {
+    color: #fff; /* Primary Color */
+}
+
+/* Right Section for Form */
+.right-section {
+    background: transparent; /* Secondary Color */
+    backdrop-filter: blur(20px);    width: 50%; /* Take half of the container */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ed730e; /* Text Color */
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ed730e; /* Field Outline */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Button in the Middle */
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ed730e; /* Primary Color */
+    color: #FFFFFFFF; /* White */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff; /* Primary Color */
+    color: #ed730e; /* White */
+    border: 2px solid #ed730e;
+}
+
+/* Links */
+.links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    color: #fe913e; /* Accent Color */
+    text-decoration: none;
+    
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+}

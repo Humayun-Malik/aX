@@ -1,0 +1,159 @@
+/* Global Styling */
+body {
+    background: url('i1.jpg') no-repeat center center fixed; /* Replace with actual path */
+    background-size: cover;
+    color: #fe913e; /* Text Color */
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    z-index: -1;
+}
+
+.title {
+    font-style: italic;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+/* Container for User Profile */
+.container {
+    background-color: transparent; /* Secondary Color */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    display: flex;
+    width: 900px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Left Section (Profile Picture) */
+.left-section {
+    background-color: transparent; /* Secondary Color */
+    backdrop-filter: blur(20px);    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text horizontally */
+    width: 40%; /* Width for profile pic section */
+    padding: 20px;
+}
+
+.logo {
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Right Section (User Info) */
+.right-section {
+    width: 60%; /* Width for info section */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-section h2 {
+    color: #ed730e; /* Primary Color */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* User Info Styling */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between each user info item */
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item label {
+    font-size: 16px;
+    color: #ed730e; /* Label color */
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 18px;
+    color: #ab4e07; /* Text color */
+    background-color: #FFF5F5F5; /* Light background for the text fields */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ed730e; /* Border around user info */
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4500; /* ArenaX Primary Color */
+    color: #fff; /* White Text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: #FF0000; /* Darker Primary Color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.button:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+}
+
+.button:focus {
+    outline: 2px solid #ed730e;
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .info-item p {
+        font-size: 16px;
+    }
+}

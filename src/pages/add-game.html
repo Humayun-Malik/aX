@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Game</title>
+    <link rel="stylesheet" href="../css/add-game.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Game to Your List</h1>
+        
+        <!-- Instructions Section -->
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Enter the <strong>Name</strong> of the application (e.g., "Google Chrome").</li>
+                <li>Provide the <strong>Path</strong> to the executable file (e.g., "C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe").</li>
+                <li>Ensure the path is correctly formatted, using four backslashes (\\\\).</li>
+            </ul>
+        </div>
+
+        <!-- Form to Add Game -->
+        <div class="form">
+            <label for="gameName">Application Name:</label>
+            <input type="text" id="gameName" placeholder="e.g., Microsoft Edge" required>
+            
+            <label for="gamePath">Application Path:</label>
+            <input type="text" id="gamePath" placeholder="e.g., C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe" required>
+
+            <button onclick="addGame()">Add Game</button>
+
+            <p id="feedback"></p>
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="back-to-home">
+            <a href="game-shortcuts.html">
+                <button>Back</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="../js/add-game.js"></script>
+</body>
+</html>
